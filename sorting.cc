@@ -8,8 +8,6 @@ using namespace std;
 /// Basic implementation for bubble sort with two nested loops.
 /// The outer loop defines the range that is not yet sorted and the inner loop
 /// passes over the unsorted range and swaps every unordered pair
-/// You do not have to use the optimization heuristics that we described in class
-/// but you can implement them if you would like.
 
 template <typename T>
 void bubbleSort(vector<T>& a) {
