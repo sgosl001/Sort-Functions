@@ -11,7 +11,6 @@ using namespace std;
 
 template <typename T>
 void bubbleSort(vector<T>& a) {
-  // TODO
   int i, j;
   int n = a.size();
   for (j = n - 1; j > 0; j--)
@@ -33,7 +32,6 @@ void bubbleSort(vector<T>& a) {
 /// after adding each element
 template <typename T>
 void insertionSort(vector<T>& a) {
-  // TODO
   int i, j, key;
   for (i = 1; i < a.size(); i++)
   {
@@ -71,7 +69,7 @@ void selectionSort(vector<T>& a) {
 
 }
 
-/// Implement the original Shell sort algorithm which uses gaps of sizes
+/// shell sort algorithm which uses gaps of sizes
 /// n/2, n/4, ..., 1
 template <typename T>
 void shellSort1(vector<T>& a) {
@@ -93,6 +91,8 @@ void shellSort1(vector<T>& a) {
 	}
 }
 
+//Quicksort chooses the middle value as the pivot in this case and increments from the right and left
+
 template <typename T>
 void quickSort(vector<T>& a, int left, int right) {
       int i = left, j = right;
@@ -104,7 +104,7 @@ void quickSort(vector<T>& a, int left, int right) {
                   i++;
             while (a[j] > pivot)
                   j--;
-            if (i <= j) {
+            if (i > j) {
                   tmp = a[i];
                   a[i] = a[j];
                   a[j] = tmp;
